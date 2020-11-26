@@ -28,7 +28,7 @@ header.header img {
 section.top-page {
     background: url('../images/bg.jpg');
     background-size: cover;
-    height: 80vh;
+    height: 70vh;
     padding: 25px;
 }
 
@@ -51,7 +51,7 @@ section.top-page {
     color: white;
     text-decoration: none;
     position: absolute;
-    bottom: 0;
+    bottom: -99%;
 }
 
 /* menu de navigation */
@@ -60,7 +60,7 @@ nav.nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 400px;
+    width: 500px;
     margin-left: 30px;
 }
 
@@ -101,6 +101,7 @@ nav.nav li a {
     font-family: 'Abril FatFace', cursive;
     font-weight: 100;
     position: relative;
+    margin-bottom: 0.5em;
 }
 
 .section-title::before {
@@ -108,7 +109,7 @@ nav.nav li a {
     position: absolute;
     background-color: #ADD981;
     width: 50px;
-    height: 7px;
+    height: 6px;
     bottom: 0;
 }
 
@@ -156,19 +157,33 @@ nav.nav li a {
     bottom: 0;
     background-color: #FFFFFFDF;
     padding: 5px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.9rem;
+    
 }
 
 .plant-name {
-    font-size: 22px;
+    font-size: 1.3rem;
     font-weight: 600;
-    line-height: 3px;
+    text-decoration: none;    
 }
 
 .plant-price {
     color: #ADD981;
-    line-height: 3px;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 800;
+}
+
+.add-cart {
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #ADD981;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    color: white;
 }
 
 /* nos plantes */
