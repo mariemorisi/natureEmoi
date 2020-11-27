@@ -167,7 +167,8 @@ nav.nav li a {
 .plant-name {
     font-size: 1.3rem;
     font-weight: 600;
-    text-decoration: none;    
+    text-decoration: none;
+    color: #648b3e;    
 }
 
 .plant-price {
@@ -178,10 +179,10 @@ nav.nav li a {
 
 .add-cart {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: #ADD981;
     border: none;
-    padding: 0.6rem;
+    padding: 0.4rem;
     border-radius: 1rem;
     color: white;
 }

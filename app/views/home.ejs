@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello</p>
-</body>
-</html>
+<%- include('partials/header') %>
+    
+    <section class="services" id="services">
+        <div class="service-item">
+            <i class="fas fa-store delivery-icon"></i>
+            <p class="service-details">Nos magasins à votre service</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-people-carry delivery-icon"></i>
+            <p class="service-details">Retrait en magasin sans contact</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-truck delivery-icon"></i>
+            <p class="service-details">Livraison à domicile sans contact</p>
+        </div>
+    </section> 
+
+    <section class="bests-items" id="bests-items">
+        <h2 class="section-title">
+            Nos meilleures ventes
+        </h2>
+
+        <div class="best-plants">
+        <% for (const bestPlant of bestPlants) { %>
+            <div class="plant-box plant<%=bestPlant.css_class%> no-grid">
+                <div class="plant-details">
+                    <a href="#" class="plant-name"><%=bestPlant.name%></a>
+                    <p class="plant-price"><%=bestPlant.price%> €</p>
+                    <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
+                </div>
+            </div>
+        <% } %>
+        </div>
+    </section> 
+
+    <section class="all-plants" id="all-plants">
+        <h2 class="section-title">
+            Nos plantes
+        </h2>
+        <div class="plant-grid">
+
+            <% for (const plant of plants) { %>
+                <div class="plant-box plant-grid<%=plant.css_class%>">
+                    <div class="plant-details">\
+                        <a href="#" class="plant-name"><%=plant.name%></a>
+                        <span class="plant-price"><%=plant.price%> €</span>
+                        <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+    </section> 
+<%- include('partials/footer') %>

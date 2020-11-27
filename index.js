@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 // on importe le router
-const router = require('./app/routes');
+const router = require('./app/router');
 const PORT = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
