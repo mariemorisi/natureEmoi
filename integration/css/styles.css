@@ -234,11 +234,34 @@ nav.nav li a {
     grid-row: 3/5;
 }
 
+
+/* page article */ 
+
+.article-plant {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.div-plant-img {
+    text-align: center;
+}
+
+.plant-img {
+    width: 50%;
+    height: auto;
+}
+
+.plant-desc {
+    line-height: 4em;
+}
+
+
 /* pied de page */
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 20px 100px;
     font-weight: 600;

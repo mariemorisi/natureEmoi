@@ -20,7 +20,6 @@ const dataMapper = {
             let plants = [];
             if (result) {
                 plants = result.rows;
-                console.log(plants);
             }
             callback(error, plants);
         });
@@ -40,6 +39,24 @@ const dataMapper = {
         }
         callback(error, bestPlants);
         });
+    },
+
+    getOnePlant: (id, callback) => {
+        const query = {
+            text: `SELECT * FROM plants WHERE id = ${id}`, 
+        }
+        client.query(query, (error, result) => {
+            if(error) {
+                console.error('erreur sur GetOnePlant');
+            }
+
+            let plant = [];
+            if (result) {
+                plant = result.rows[0];
+            }
+
+            callback(error, plant);
+        })
     }
 }
 

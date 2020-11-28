@@ -4,7 +4,7 @@ const mainController = {
     homePage: (request, response) => {
         dataMapper.getAllPlants((error, plants) => {
             if(error) {
-                console.err('Erreur dans le mainController');
+                console.error('Erreur dans le mainController');
                 return;
             }
 
@@ -14,7 +14,17 @@ const mainController = {
                 }
                 response.render('home', { bestPlants, plants })
             })
-    })} 
+        })
+    },
+    article: (request, response) => {
+        console.log(request.params.id + ' : request.params.id log')
+        dataMapper.getOnePlant(Number(request.params.id), (error, plant) => {
+            if(error) {
+                console.error('Erreur getOnePlant');
+            }
+            response.render('article', { plant })
+        })
+    } 
 }
 
 module.exports = mainController;

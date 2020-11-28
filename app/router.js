@@ -4,5 +4,6 @@ const router = express.Router();
 
 
 router.get('/', mainController.homePage);
+router.get('/article/:id', mainController.article);
 
 module.exports = router;

@@ -24,7 +24,7 @@
         <% for (const bestPlant of bestPlants) { %>
             <div class="plant-box plant<%=bestPlant.css_class%> no-grid">
                 <div class="plant-details">
-                    <a href="#" class="plant-name"><%=bestPlant.name%></a>
+                    <a href="article/<%=bestPlant.id%>" class="plant-name"><%=bestPlant.name%></a>
                     <p class="plant-price"><%=bestPlant.price%> €</p>
                     <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
                 </div>
@@ -41,8 +41,8 @@
 
             <% for (const plant of plants) { %>
                 <div class="plant-box plant-grid<%=plant.css_class%>">
-                    <div class="plant-details">\
-                        <a href="#" class="plant-name"><%=plant.name%></a>
+                    <div class="plant-details">
+                        <a href="article/<%=plant.id%>" class="plant-name"><%=plant.name%></a>
                         <span class="plant-price"><%=plant.price%> €</span>
                         <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
                     </div>

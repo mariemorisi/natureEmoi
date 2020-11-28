@@ -12,7 +12,7 @@ app.set('views', './app/views');
 
 app.use(express.static('integration'));
 
-// routage !
+app.use(express.urlencoded({extended: true}));
 app.use(router);
 
 app.listen(PORT, () => {
