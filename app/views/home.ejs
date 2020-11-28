@@ -26,7 +26,7 @@
                 <div class="plant-details">
                     <a href="article/<%=bestPlant.id%>" class="plant-name"><%=bestPlant.name%></a>
                     <p class="plant-price"><%=bestPlant.price%> €</p>
-                    <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
+                    <button class="add-cart"><a href="/panier/add/<%=bestPlant.id%>" class="add-cart">Ajouter au panier</a></button>
                 </div>
             </div>
         <% } %>
@@ -44,7 +44,7 @@
                     <div class="plant-details">
                         <a href="article/<%=plant.id%>" class="plant-name"><%=plant.name%></a>
                         <span class="plant-price"><%=plant.price%> €</span>
-                        <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
+                        <button class="add-cart"><a href="/panier/add/<%=plant.id%>" class="add-cart">Ajouter au panier</a></button>
                     </div>
                 </div>
             <% } %>

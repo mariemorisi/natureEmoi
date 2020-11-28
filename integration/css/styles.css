@@ -257,6 +257,78 @@ nav.nav li a {
 }
 
 
+
+/* Panier */
+.cart-container {
+    margin: 100px;
+}
+
+.cart-title {
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+.table {
+    width: 60%;
+    margin: auto;
+    border: solid rgb(206, 233, 195) 1px;
+}
+
+.item-detail {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.plant-img-cart {
+    width: 10%;
+}
+
+table.table tbody tr td {
+    vertical-align: middle;
+    padding: 0.5em;
+}
+thead th {
+    background-color: #e5f5d4;
+    padding: 0.5em;
+}
+
+tfoot td {
+    padding-bottom: 0.8em;
+}
+
+.item-description {
+    padding-left: 30%;
+}
+
+.cart-input {
+    max-width: 100px;
+  }
+  
+.item-subtotal {
+    font-weight: bold;
+}
+.item-total {
+    font-weight: bold;
+}
+
+.btn-success {
+    margin: auto;
+    border: #ADD981;
+    border-radius: 1em;
+    background-color: #ADD981;
+    color: white;
+    width: 20%;
+    padding: 1em;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    cursor: pointer;
+}
+
+.text-right {
+    text-align: right;
+    padding-right: 3em;
+}
 /* pied de page */
 
 footer {

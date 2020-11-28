@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<section class ="cart-container">
+    <h3 class="section-title cart-title">Votre panier</h3>
+
+    <table class="table">
+        <thead>
+            <th>Article</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <tbody>
+                <% for (const plant of cart) { %>
+                <tr>
+                    <td class="item-detail">
+                        <% if (plant.category === "meilleure vente") { %>
+                            <img src="/images/nos_meilleures_ventes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img-cart">
+                        <% } else  { %> 
+                            <img src="/images/nos_plantes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img-cart">
+                        <% } %>
+
+                      <div class="item-description">
+                          <p class="plant-name"><%=plant.name%>
+                            <span class="plant-price"><%=plant.price%> €</span>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <strong><%=plant.quantity%></strong>
+                      <a href="/panier/add/<%=plant.id%>">+</a> / <a href="/panier/less/<%=plant.id%>">-</a>
+                    </td>
+                    <td>
+                      <p class="item-subtotal"><%=plant.subTotal%>€</p>
+                    </td>
+                </tr>
+                <% } %>
+                
+                <tr>
+                    <td class="text-right" colspan="2">
+                    Frais de port
+                    </td>
+                    <td class="item-subtotal">
+                    9.90 €
+                    </td>
+                </tr>
+
+                <tfoot>
+                
+                    <tr class="row-total">
+                    <td class="text-right" colspan="2">
+                        Total TTC
+                    </td>
+                    <td class="item-total">
+                        <%=details.total%> €
+                    </td>
+                    </tr>
+
+                </tfoot>
+
+            </tbody>
+
+    </table>
+
+    <div class="btn btn-success">
+        Passer Commande
+      </div>
+
+
+</section>
+<%- include('partials/footer') %>

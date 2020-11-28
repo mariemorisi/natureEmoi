@@ -4,13 +4,17 @@
 <div class="article-plant">
     <!-- <div class="plant-box plant<%=plant.css_class%> "> -->
         <div class="div-plant-img">
-            <img src="/images/nos_plantes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img">
+            <% if (plant.category === "meilleure vente") { %>
+                <img src="/images/nos_meilleures_ventes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img">
+            <% } else  { %> 
+                <img src="/images/nos_plantes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img">
+            <% } %>
         </div>
         <div class="plant-desc">
             <a href="article/<%=plant.id%>" class="plant-name"><%=plant.name%></a>
             <p><%=plant.description%></p>
             <p class="plant-price"><%=plant.price%> €</p>
-            <button class="add-cart"><a href="#" class="add-cart">Ajouter au panier</a></button>
+            <button class="add-cart"><a href="/panier/add/<%=plant.id%>" class="add-cart">Ajouter au panier</a></button>
         </div>
     </div>
 </div>
