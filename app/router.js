@@ -9,5 +9,6 @@ router.get('/', mainController.homePage);
 router.get('/article/:id', mainController.article);
 router.get('/panier', cartController.cartPage);
 router.get('/panier/add/:id', cartController.addCart);
+router.get('/panier/delete/:id', cartController.deleteCart);
 
 module.exports = router;

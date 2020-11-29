@@ -54,6 +54,30 @@ const cartController = {
             response.redirect('/panier');
         }
 
+    },
+
+    deleteCart: (request, response) => {
+    const id = Number(request.params.id);
+
+    const cart = request.session.cart;
+
+    
+    const plantInCart = cart.find(item => item.id === id);
+    if (plantInCart) {
+
+      plantInCart.quantity--;
+
+      // Ensuite on vérifie si on a 0 ou moins afin de retirer la figurine du panier
+
+      // filter renvoi un nouveau tableau fabriquer a partir d'un tableau que l'on a filtré avec une condition
+      // On recréer complètement le panier ( c'est à dire que lin va créer une nouvelle référence)
+
+      request.session.cart = request.session.cart.filter(plant => plant.quantity > 0);
+      
+      response.redirect('/panier');
+    } else {
+      next();
+    }
     }
  }
 

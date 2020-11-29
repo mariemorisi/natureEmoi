@@ -25,6 +25,10 @@ header.header img {
     width: 150px;
 }
 
+.header-cart {
+    background-color: black;
+}
+
 section.top-page {
     background: url('../images/bg.jpg');
     background-size: cover;

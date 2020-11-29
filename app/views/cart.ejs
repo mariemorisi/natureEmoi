@@ -1,4 +1,23 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureEmoi - Ventes de plantes en ligne</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+</head>
+<body>
+        <header class="header header-cart">
+            <img src="images/logo.png" alt="Logo du site">
+            <nav class="nav">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/#bests-items">Nos meilleurs ventes</a></li>
+                <li><a href="/#all-plants">Nos plantes</a></li>
+                <li><a href="/panier">Panier</a></li>
+            </nav>
+        </header>
 
 <section class ="cart-container">
     <h3 class="section-title cart-title">Votre panier</h3>
@@ -26,7 +45,7 @@
                     </td>
                     <td>
                       <strong><%=plant.quantity%></strong>
-                      <a href="/panier/add/<%=plant.id%>">+</a> / <a href="/panier/less/<%=plant.id%>">-</a>
+                      <a href="/panier/add/<%=plant.id%>">+</a> / <a href="/panier/delete/<%=plant.id%>">-</a>
                     </td>
                     <td>
                       <p class="item-subtotal"><%=plant.subTotal%>€</p>
