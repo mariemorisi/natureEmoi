@@ -29,6 +29,11 @@ header.header img {
     background-color: black;
 }
 
+.header-article {
+    background-color: black;
+    padding: 2em;
+}
+
 section.top-page {
     background: url('../images/bg.jpg');
     background-size: cover;
@@ -244,7 +249,16 @@ nav.nav li a {
 .article-plant {
     display: flex;
     justify-content: center;
-    margin: 2em;
+    align-items: center;
+    height: 90vh;
+}
+
+.article-plant-container {
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
 }
 
 .div-plant-img {
@@ -272,9 +286,10 @@ nav.nav li a {
     padding-bottom: 0.3em;
 }
 .table {
-    width: 60%;
+    width: 78%;
     margin: auto;
     border: solid rgb(206, 233, 195) 1px;
+    box-shadow: 0 20px 50px rgba(16, 41, 25, 0.39);
 }
 
 .item-detail {
@@ -284,7 +299,7 @@ nav.nav li a {
 }
 
 .plant-img-cart {
-    width: 10%;
+    width: 15%;
 }
 
 table.table tbody tr td {
@@ -293,7 +308,8 @@ table.table tbody tr td {
 }
 thead th {
     background-color: #e5f5d4;
-    padding: 0.5em;
+    padding: 0.9em;
+    font-size: 1.3em;
 }
 
 tfoot td {
@@ -313,6 +329,7 @@ tfoot td {
 }
 .item-total {
     font-weight: bold;
+    font-size: 1.3em;
 }
 
 .btn-success {
@@ -331,19 +348,28 @@ tfoot td {
 
 .text-right {
     text-align: right;
-    padding-right: 3em;
+    padding: 1em 2em 0 0;
+}
+
+.row-total {
+    background-color: rgb(229, 243, 223);
+
 }
 /* pied de page */
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 20px 100px;
+    height: 80px;
     font-weight: 600;
+    background: rgba(0, 0, 0, 0.829);
+    color: rgb(252, 247, 247);
+
 }
 
 footer a.cgv {
     text-decoration: none;
-    color: black;
+    color: rgb(252, 247, 247);
+
 }

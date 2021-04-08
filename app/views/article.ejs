@@ -9,8 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
 <body>
-        <header class="header header-cart">
-            <img src="images/logo.png" alt="Logo du site">
+        <header class="header header-article">
             <nav class="nav">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/#bests-items">Nos meilleurs ventes</a></li>
@@ -20,6 +19,7 @@
         </header>
 
 <div class="article-plant">
+    <div class="article-plant-container">
         <div class="div-plant-img">
             <% if (plant.category === "meilleure vente") { %>
                 <img src="/images/nos_meilleures_ventes/<%=plant.id%>.jpg" alt="photo de la plante" class="plant-img">
@@ -33,7 +33,7 @@
             <p class="plant-price"><%=plant.price%> €</p>
             <button class="add-cart"><a href="/panier/add/<%=plant.id%>" class="add-cart">Ajouter au panier</a></button>
         </div>
-    
+    </div>
 </div>
 
 <%- include('partials/footer') %>
